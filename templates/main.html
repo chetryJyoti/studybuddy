@@ -6,18 +6,12 @@
     <title>StudyBuddy</title>
   </head>
   <body>
-    {% include 'navbar.html' %} 
-
-    {% if messages %}
+    {% include 'navbar.html' %} {% if messages %}
     <ul class="messages">
-        {% for message in messages %}
-        <li{% if message.tags %} {% endif %}>{{ message }}</li>
-        {% endfor %}
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
     </ul>
-    {% endif %}
-    
-    {% block content %}
-    
-    {% endblock content %}
+    {% endif %} {% block content %} {% endblock content %}
   </body>
 </html>
